@@ -1,6 +1,6 @@
 services:
   openclaw:
-    image: ghcr.io/openclawai/openclaw:latest
+    image: openclawai/openclaw:latest
     restart: unless-stopped
     ports:
       - "3000:3000"
