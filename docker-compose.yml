@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  openclaw:
+    image: ghcr.io/openclawai/openclaw:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      OPENCLAW_ROLE: standalone
+    volumes:
+      - openclaw_data:/data
+
+volumes:
+  openclaw_data:
